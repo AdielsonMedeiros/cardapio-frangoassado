@@ -8,6 +8,21 @@ const closeModalBtn = document.getElementById("close-modal-btn");
 const cartCounter = document.getElementById("cart-count");
 const addressInput = document.getElementById("address");
 const addressWarn = document.getElementById("address-warn");
+const button = document.querySelectorAll('.myButton')
+
+
+button.forEach(button => {
+  button.addEventListener('click', function() {
+    this.classList.add('bg-neutral-600');
+
+  setTimeout(() => {
+     
+    this.classList.remove('bg-neutral-600'); // Adiciona a classe transparente novamente
+  }, 130);
+});
+});
+
+
 
 let cart = [];
 cartBtn.addEventListener("click", function () {
@@ -171,12 +186,15 @@ checkoutBtn.addEventListener("click", function () {
 
 function checkRestaurantOpen() {
   const data = new Date();
+  const diaDaSemana = data.getDay();
   const hora = data.getHours();
   const minuto = data.getMinutes();
   const totalMinutos = hora * 60 + minuto;
-  const inicio = 13 * 60;
-  const fim = 23 * 60 + 30;
-  return totalMinutos >= inicio && totalMinutos < fim;
+  const inicio = 7 * 60; // 7 da manhã
+  const fim = 15 * 60; // 15 da tarde
+
+  // Verifica se é domingo e se o horário está entre 7 da manhã e 15 da tarde
+  return diaDaSemana === 0 && totalMinutos >= inicio && totalMinutos < fim;
 }
 const aWpp = document.getElementById("date-a-wpp");
 const spanItem = document.getElementById("date-span");
