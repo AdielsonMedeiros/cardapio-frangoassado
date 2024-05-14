@@ -7,7 +7,7 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        home : "url('../cardapio-frango/assets/bg.png')"
+        home:"url('../assets/brasacomopacity.jpg')"
 
       }
     },
