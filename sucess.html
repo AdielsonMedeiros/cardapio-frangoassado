@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento Aprovado!</title>
+    <link href="style.css" rel="stylesheet" />
+</head>
+<body class="bg-green-100 text-center p-8">
+    <h1 class="text-4xl font-bold text-green-700">Pagamento Aprovado! ✅</h1>
+    <p class="mt-4 text-lg">Obrigado pela sua compra. Seu pedido já está sendo preparado.</p>
+    <a href="/" class="mt-8 inline-block bg-green-600 text-white font-bold py-2 px-4 rounded">
+        Voltar para o Cardápio
+    </a>
+
+    <script>
+        localStorage.removeItem("cart");
+    </script>
+</body>
+</html>

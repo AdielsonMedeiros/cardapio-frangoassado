@@ -16,7 +16,7 @@ button.forEach(button => {
     this.classList.add('bg-neutral-600');
 
   setTimeout(() => {
-     
+  
     this.classList.remove('bg-neutral-600'); // Adiciona a classe transparente novamente
   }, 130);
 });
@@ -142,46 +142,62 @@ addressInput.addEventListener("input", function (event) {
   }
 });
 
+
+
 checkoutBtn.addEventListener("click", function () {
   const isOpen = checkRestaurantOpen();
-  if (!isOpen) {
+  if (isOpen) {
     Toastify({
       text: "Ops o restaurante está fechado!",
       duration: 3000,
       close: true,
-      gravity: "top", // `top` or `bottom`
-      position: "right", // `left`, `center` or `right`
-      stopOnFocus: true, // Prevents dismissing of toast on hover
+      gravity: "top",
+      position: "right",
+      stopOnFocus: true,
       style: {
-        background: "linear-gradient(to right, #00b09b, #96c93d)",
+        background: "linear-gradient(to right, #ef4444, #b91c1c)",
       },
     }).showToast();
     return;
   }
 
   if (cart.length === 0) return;
+
   if (addressInput.value === "") {
     addressWarn.classList.remove("hidden");
     addressInput.classList.add("border-red-500");
     return;
   }
 
-  const cartItems = cart
-    .map((item) => {
-      return ` ${item.name} Quantidade: (${item.quantity}) Preço: R$ ${item.price} | `;
+
+  checkoutBtn.disabled = true;
+  checkoutBtn.innerHTML = "Processando...";
+
+  fetch("http://localhost:3000/create_preference", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      items: cart,
+    }),
+  })
+    .then(function (response) {
+      if (!response.ok) {
+        throw new Error("Falha na rede ou no servidor.");
+      }
+      return response.json();
     })
-    .join("");
-
-  const message = encodeURIComponent(cartItems);
-  const phone = "5521968520520";
-
-  window.open(
-    `https://wa.me/${phone}?text=${message} Endereço: ${addressInput.value}`,
-    "_blank"
-  );
-
-  cart = [];
-  updateCartModal();
+    .then(function (preference) {
+      window.location.href = preference.init_point;
+    })
+    .catch(function (error) {
+      alert("Ops, ocorreu um erro ao processar seu pagamento. Tente novamente.");
+      console.error(error);
+    
+      checkoutBtn.disabled = false;
+      checkoutBtn.innerHTML = "Finalizar pedido";
+    });
 });
 
 function checkRestaurantOpen() {
@@ -193,7 +209,7 @@ function checkRestaurantOpen() {
   const inicio = 7 * 60; // 7 da manhã
   const fim = 15 * 60; // 15 da tarde
 
-  // Verifica se é domingo e se o horário está entre 7 da manhã e 15 da tarde
+
   return diaDaSemana === 0 && totalMinutos >= inicio && totalMinutos < fim;
 }
 const aWpp = document.getElementById("date-a-wpp");

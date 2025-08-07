@@ -1,0 +1,13 @@
+# Pasta de dependências do Node.js (MUITO IMPORTANTE)
+node_modules/
+
+# Arquivo que guardará nossos segredos
+.env
+
+# Arquivos de log
+npm-debug.log
+*.log
+
+# Arquivos de sistema operacional
+.DS_Store
+Thumbs.db
