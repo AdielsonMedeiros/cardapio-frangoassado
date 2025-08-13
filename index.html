@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"/>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,13 +24,16 @@
     />
 
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Abençoado Frango - O melhor Frango Assado da Região!" />
-    <meta property="og:image" content="https://hamburgueria-five-nu.vercel.app/assets/Logomarca_de_hamburgueria_artesanal-removebg-preview.png" />
+    <meta
+      property="og:title"
+      content="Abençoado Frango - O melhor Frango Assado da Região!"
+    />
+    <meta
+      property="og:image"
+      
+    />
     <meta property="og:description" content=" Frango Assado de QUALIDADE! " />
     <meta property="og:site_name" content="Abençoado Frango" />
-
-
-
 
     <link rel="stylesheet" href="./styles/output.css" />
     <title>Abençoado Frango</title>
@@ -37,369 +44,256 @@
       <div class="w-full h-full flex flex-col justify-center items-center">
         <img
           src="./assets/logo-frangoo.png"
-          alt="Logo de hamburguer"
+          alt="Logo do frango assado"
           class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200"
         />
         <h1 class="text-4xl mt-4 mb-2 font-bold text-red-600">
           Abençoado Frango
         </h1>
 
-        <span class="text-white font-medium">R. Corumba, 435 - Rio Imbariê, Duque de Caxias - RJ</span
+        <span class="text-white font-medium"
+          >R. Corumba, 435 - Rio Imbariê, Duque de Caxias - RJ</span
         >
 
         <div class="bg-green-500 px-4 py-1 rounded-lg mt-5" id="date-span">
-          <span class="text-white font-medium">Aberto aos Domingo -  7:00 às 15:00</span
+          <span class="text-white font-medium"
+            >Aberto aos Domingo - 7:00 às 15:00</span
           >
-          
         </div>
 
         <div class="bg-green-500 px-4 py-1 rounded-lg mt-5" id="date-a-wpp">
-          <a class="text-white font-medium" href="https://wa.me/5521968520520"><i class="fa-brands fa-whatsapp"></i>  Peça pelo Whatsapp</a>
+          <a class="text-white font-medium" href="https://wa.me/5521968520520"
+            ><i class="fa-brands fa-whatsapp"></i> Peça pelo Whatsapp</a
+          >
         </div>
-        
       </div>
     </header>
     <!--Fim do Header-->
     <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">
-      Conheça nosso menu
-    </h2>
-    <!--Começo do Menu-->
+    Conheça nosso cardápio
+</h2>
 
-    <div id="menu">
-      <main
-        class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16"
-      >
-        <!--Produtos do estabelecimento 1-->
-        <div class="flex gap-2">
-          <img
-            src="./assets/frangoassado.jpg"
-            alt="Frango Assado com Batata e farofa"
-            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-3 duration-200"
-          />
+<div id="menu" class="px-2">
 
-          <div>
-            <p class="font-bold">Frango Assado com Batata e Farofa</p>
-            <p class="text-sm">O Frango é assado até atingir a perfeição, possui uma pele irresistivelmente crocante e um interior suculento. Ele é acompanhado de batatas assadas, farofa bem temperada, que adiciona uma textura única ao prato.</p>
+    <main class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mx-auto max-w-7xl">
 
-            <div class="flex items-center gap-2 justify-between mt-3">
-              <p class="font-bold text-lg">R$ 23,99</p>
-              <button
-                class="myButton bg-gray-900 px-5 rounded add-to-cart-btn hover:scale-110 "
-                data-name="Frango Assado"
-                data-price="23.99"
-              >
-                <i class="fa fa-cart-plus text-lg text-white"></i>
-              </button>
+        <div class="flex items-center bg-white rounded-xl shadow-md overflow-hidden p-3 transform hover:shadow-lg transition-shadow duration-300">
+            <img src="./assets/frangoassado.jpg" alt="Frango Assado com Batata e farofa" class="w-28 h-28 rounded-lg object-cover" />
+            <div class="flex-1 ml-4">
+                <h3 class="font-bold text-md text-gray-800">Frango Assado Completo</h3>
+                <p class="text-xs text-gray-600 mt-1">Pele crocante, interior suculento, com batatas e farofa.</p>
+                <div class="flex items-center justify-between mt-3">
+                    <p class="font-bold text-lg text-gray-900">R$ 23,99</p>
+                    <button class="myButton add-to-cart-btn bg-red-600 text-white font-semibold text-sm py-1.5 px-3 rounded-lg hover:bg-red-700 transition-colors" data-name="Frango Assado" data-price="23.99">
+                        <i class="fa fa-cart-plus"></i>
+                    </button>
+                </div>
             </div>
-          </div>
         </div>
-        <!--Fim do produto 1-->
-        <!--Produtos do estabelecimento 2-->
-        <div class="flex gap-2">
-          <img
-            src="./assets/salpicao.jpg"
-            alt="Salpicão"
-            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-3 duration-200"
-          />
 
-          <div>
-            <p class="font-bold">Salpicão Cremoso</p>
-            <p class="text-sm"> Uma deliciosa combinação de frango desfiado, cenoura ralada fresquinha, milho, azeitona e maionese caseira, se unindo para criar uma experiência gastronômica inesquecível, este salpicão cremoso é uma explosão de sabores.</p>
-
-            <div class="flex items-center gap-2 justify-between mt-3">
-              <p class="font-bold text-lg">R$ 9,99</p>
-              <button
-                
-                class="myButton bg-gray-900 px-5 rounded add-to-cart-btn hover:scale-110"
-                data-name="Salpicao"
-                data-price="9.99"
-              >
-                <i class="fa fa-cart-plus text-lg text-white"></i>
-              </button>
+        <div class="flex items-center bg-white rounded-xl shadow-md overflow-hidden p-3 transform hover:shadow-lg transition-shadow duration-300">
+            <img src="./assets/salpicao.jpg" alt="Salpicão" class="w-28 h-28 rounded-lg object-cover" />
+            <div class="flex-1 ml-4">
+                <h3 class="font-bold text-md text-gray-800">Salpicão Cremoso</h3>
+                <p class="text-xs text-gray-600 mt-1">Frango desfiado, cenoura, milho, azeitona e maionese caseira.</p>
+                <div class="flex items-center justify-between mt-3">
+                    <p class="font-bold text-lg text-gray-900">R$ 9,99</p>
+                    <button class="myButton add-to-cart-btn bg-red-600 text-white font-semibold text-sm py-1.5 px-3 rounded-lg hover:bg-red-700 transition-colors" data-name="Salpicao" data-price="9.99">
+                        <i class="fa fa-cart-plus"></i>
+                    </button>
+                </div>
             </div>
-          </div>
         </div>
-        <!--Fim do produto 2-->
-        <!--Produtos do estabelecimento 3-->
-        <div class="flex gap-2">
-          <img
-            src="./assets/feijaofradinho.jpg"
-            alt="Feijão-Fradinho"
-            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-3 duration-200"
-          />
 
-          <div>
-            <p class="font-bold">Feijão Fradinho com Carne Seca</p>
-            <p class="text-sm">
-              Este prato traz o feijão fradinho cozido à perfeição, carne seca suculenta, cebola picada, tomate fresco e cheiro verde, tudo regado com um belo azeite. Simples, saboroso e irresistível.
-            </p>
-
-            <div class="flex items-center gap-2 justify-between mt-3">
-              <p class="font-bold text-lg">R$ 9,99</p>
-              <button
-                
-                class="myButton bg-gray-900 px-5 rounded add-to-cart-btn hover:scale-110"
-                data-name="Feijao-Fradinho"
-                data-price="9.99"
-              >
-                <i class="fa fa-cart-plus text-lg text-white"></i>
-              </button>
+        <div class="flex items-center bg-white rounded-xl shadow-md overflow-hidden p-3 transform hover:shadow-lg transition-shadow duration-300">
+            <img src="./assets/feijaofradinho.jpg" alt="Feijão-Fradinho" class="w-28 h-28 rounded-lg object-cover" />
+            <div class="flex-1 ml-4">
+                <h3 class="font-bold text-md text-gray-800">Feijão Fradinho c/ Carne Seca</h3>
+                <p class="text-xs text-gray-600 mt-1">Com carne seca, cebola, tomate, cheiro verde e azeite.</p>
+                <div class="flex items-center justify-between mt-3">
+                    <p class="font-bold text-lg text-gray-900">R$ 9,99</p>
+                    <button class="myButton add-to-cart-btn bg-red-600 text-white font-semibold text-sm py-1.5 px-3 rounded-lg hover:bg-red-700 transition-colors" data-name="Feijao-Fradinho" data-price="9.99">
+                        <i class="fa fa-cart-plus"></i>
+                    </button>
+                </div>
             </div>
-          </div>
         </div>
-        <!--Fim do produto 3-->
-        <!--Produtos do estabelecimento 4-->
-        <div class="flex gap-2">
-          <img
-            src="./assets/batatafrita.jpg"
-            alt="batata-frita"
-            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-3 duration-200"
-          />
 
-          <div>
-            <p class="font-bold">Batata Frita</p>
-            <p class="text-sm"> Batatas de qualidade, fritas até ficarem douradas e crocantes. Servidas quentes e salgadas, é o pedido perfeito e o acompanhamento ideal para qualquer refeição!”</p>
-
-            <div class="flex items-center gap-2 justify-between mt-3">
-              <p class="font-bold text-lg">R$ 15,99</p>
-              <button
-                
-                class="myButton bg-gray-900 px-5 rounded add-to-cart-btn hover:scale-110"
-                data-name="Batata-frita"
-                data-price="15.99"
-              >
-                <i class="fa fa-cart-plus text-lg text-white"></i>
-              </button>
+        <div class="flex items-center bg-white rounded-xl shadow-md overflow-hidden p-3 transform hover:shadow-lg transition-shadow duration-300">
+            <img src="./assets/batatafrita.jpg" alt="batata-frita" class="w-28 h-28 rounded-lg object-cover" />
+            <div class="flex-1 ml-4">
+                <h3 class="font-bold text-md text-gray-800">Batata Frita</h3>
+                <p class="text-xs text-gray-600 mt-1">Batatas selecionadas, douradas, crocantes e bem sequinhas.</p>
+                <div class="flex items-center justify-between mt-3">
+                    <p class="font-bold text-lg text-gray-900">R$ 15,99</p>
+                    <button class="myButton add-to-cart-btn bg-red-600 text-white font-semibold text-sm py-1.5 px-3 rounded-lg hover:bg-red-700 transition-colors" data-name="Batata-frita" data-price="15.99">
+                        <i class="fa fa-cart-plus"></i>
+                    </button>
+                </div>
             </div>
-          </div>
         </div>
-        <!--Fim do produto 4-->
-        <!--Produtos do estabelecimento 5-->
-        <div class="flex gap-2">
-          <img
-            src="./assets/macarronese.jpg"
-            alt="Macarronese"
-            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-3 duration-200"
-          />
 
-          <div>
-            <p class="font-bold">Macarronese</p>
-            <p class="text-sm">Um delicioso macarrão frio, misturado com legumes frescos, maionese cremosa e temperos suaves. O acompanhamento perfeito para qualquer prato principal!</p>
-
-            <div class="flex items-center gap-2 justify-between mt-3">
-              <p class="font-bold text-lg">R$ 9,90</p>
-              <button
-                
-                class="myButton bg-gray-900 px-5 rounded add-to-cart-btn hover:scale-110"
-                data-name="Macarronese"
-                data-price="9.99"
-              >
-                <i class="fa fa-cart-plus text-lg text-white"></i>
-              </button>
+        <div class="flex items-center bg-white rounded-xl shadow-md overflow-hidden p-3 transform hover:shadow-lg transition-shadow duration-300">
+            <img src="./assets/macarronese.jpg" alt="Macarronese" class="w-28 h-28 rounded-lg object-cover" />
+            <div class="flex-1 ml-4">
+                <h3 class="font-bold text-md text-gray-800">Macarronese</h3>
+                <p class="text-xs text-gray-600 mt-1">Macarrão frio, legumes frescos e maionese cremosa.</p>
+                <div class="flex items-center justify-between mt-3">
+                    <p class="font-bold text-lg text-gray-900">R$ 9,90</p>
+                    <button class="myButton add-to-cart-btn bg-red-600 text-white font-semibold text-sm py-1.5 px-3 rounded-lg hover:bg-red-700 transition-colors" data-name="Macarronese" data-price="9.99">
+                        <i class="fa fa-cart-plus"></i>
+                    </button>
+                </div>
             </div>
-          </div>
         </div>
-        <!--Fim do produto 5-->
-        <!--Produtos do estabelecimento 6-->
-        <div class="flex gap-2">
-          <img
-            src="./assets/frangoassadoMaisCocaCola.png"
-            alt="Combo de Frango assado e coca-cola"
-            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-3 duration-200"
-          />
 
-          <div>
-            <p class="font-bold">Combo Abençoado</p>
-            <p class="text-sm">
-              Um frango assado suculento, com pele crocante e carne macia, perfeitamente temperado. Acompanhado de uma Coca-Cola gelada, refrescante e borbulhante. A combinação perfeita para uma refeição saborosa e satisfatória!
-            </p>
-
-            <div class="flex items-center gap-2 justify-between mt-3">
-              <p class="font-bold text-lg">R$ 33,99</p>
-              <button
-                
-                class="myButton bg-gray-900 px-5 rounded add-to-cart-btn hover:scale-110"
-                data-name="FrangoAssado-CocaCola"
-                data-price="33.99"
-              >
-                <i class="fa fa-cart-plus text-lg text-white"></i>
-              </button>
+        <div class="flex items-center bg-white rounded-xl shadow-md overflow-hidden p-3 transform hover:shadow-lg transition-shadow duration-300">
+            <img src="./assets/frangoassadoMaisCocaCola.png" alt="Combo de Frango assado e coca-cola" class="w-28 h-28 rounded-lg object-cover" />
+            <div class="flex-1 ml-4">
+                <h3 class="font-bold text-md text-gray-800">Combo Abençoado</h3>
+                <p class="text-xs text-gray-600 mt-1">Frango assado suculento e uma Coca-Cola gelada.</p>
+                <div class="flex items-center justify-between mt-3">
+                    <p class="font-bold text-lg text-gray-900">R$ 33,99</p>
+                    <button class="myButton add-to-cart-btn bg-red-600 text-white font-semibold text-sm py-1.5 px-3 rounded-lg hover:bg-red-700 transition-colors" data-name="FrangoAssado-CocaCola" data-price="33.99">
+                        <i class="fa fa-cart-plus"></i>
+                    </button>
+                </div>
             </div>
-          </div>
         </div>
-        <!--Fim do produto 6-->
-        
-      </main>
-      <div class="mx-auto max-w-7xl px-2 my-2">
-        <h2 class="font-bold text-3xl">Bebidas</h2>
-      </div>
 
-      <!--GRID BEBIDAS-->
-      <div
-        class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16"
-        id="menu"
-      >
-        <!--Bebida 1-->
-        <div class="flex gap-2">
-          <img
-            src="./assets/cocacola.jpg"
-            alt="CocaCola"
-            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-3 duration-200"
-          />
+    </main>
 
-          <div>
-            <p class="font-bold">Coca-Cola 2L</p>
-            <p class="text-sm">Uma garrafa grande de Coca-Cola, perfeita para compartilhar. Sinta o sabor refrescante e as borbulhas efervescentes em cada gole. Ideal para acompanhar refeições ou para se refrescar em um dia quente!</p>
+</div>
+<div class="px-2 mt-10">
 
-            <div class="flex items-center gap-2 justify-between mt-3">
-              <p class="font-bold text-lg">R$ 10,00</p>
-              <button
-                
-                class="myButton bg-gray-900 px-5 rounded add-to-cart-btn hover:scale-110"
-                data-name="Coca-cola"
-                data-price="10.00"
-              >
-                <i class="fa fa-cart-plus text-lg text-white"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-        <!--Bebida 1-->
-        <!--Bebida 2-->
-        <div class="flex gap-2">
-          <img
-            src="./assets/guarana.jpg"
-            alt="Guaraná Antarctica"
-            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-3 duration-200"
-          />
-
-          <div>
-            <p class="font-bold">Guaraná Antarctica</p>
-            <p class="text-sm">Uma garrafa grande de Guaraná Antarctica, a bebida brasileira favorita. Com seu sabor único e refrescante, é perfeita para compartilhar em reuniões ou para acompanhar uma refeição deliciosa.</p>
-
-            <div class="flex items-center gap-2 justify-between mt-3">
-              <p class="font-bold text-lg">R$ 10,00</p>
-              <button
-                
-                class=" myButton bg-gray-900 px-5 rounded add-to-cart-btn hover:scale-110"
-                data-name="Guarana-Antarctica"
-                data-price="10.00"
-              >
-                <i class="fa fa-cart-plus text-lg text-white"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-        <!--Bebida 2-->
-
-         <!--Bebida 3-->
-         <div class="flex gap-2">
-          <img
-            src="./assets/pepsi.jpg"
-            alt="Pepsi"
-            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-3 duration-200"
-          />
-
-          <div>
-            <p class="font-bold">Pepsi 2L</p>
-            <p class="text-sm">Uma garrafa grande de Pepsi, com seu sabor inconfundível e refrescante. Perfeita para compartilhar em momentos especiais ou para acompanhar sua refeição favorita. Uma explosão de sabor a cada gole!</p>
-
-            <div class="flex items-center gap-2 justify-between mt-3">
-              <p class="font-bold text-lg">R$ 10,00</p>
-              <button
-                
-                class="myButton bg-gray-900 px-5 rounded add-to-cart-btn hover:scale-110"
-                data-name="Pepsi"
-                data-price="10.00"
-              >
-                <i class="fa fa-cart-plus text-lg text-white"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-        <!--Bebida 3-->
-
-        <!--Bebida 4-->
-        <div class="flex gap-2">
-          <img
-            src="./assets/pakera.jpg"
-            alt="Pakera Guarana"
-            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-3 duration-200"
-          />
-
-          <div>
-            <p class="font-bold">Pakera 2L</p>
-            <p class="text-sm">Uma garrafa grande de Pakera, com seu sabor único e refrescante. Ideal para compartilhar em ocasiões especiais ou para acompanhar sua refeição favorita. Uma experiência de sabor que você vai adorar!</p>
-
-            <div class="flex items-center gap-2 justify-between mt-3">
-              <p class="font-bold text-lg">R$ 7,00</p>
-              <button
-                
-                class="myButton bg-gray-900 px-5 rounded add-to-cart-btn hover:scale-110"
-                data-name="Pakera"
-                data-price="7.00"
-              >
-                <i class="fa fa-cart-plus text-lg text-white"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-        <!--Bebida 4-->
-
-
-      </div>
-      <!--Fim do GRID BEBIDAS-->
+    <div class="mx-auto max-w-7xl">
+      <h2 class="font-bold text-2xl mb-6">Bebidas</h2>
     </div>
-    <!--Fim do Menu-->
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mx-auto max-w-7xl mb-16">
+
+        <div class="flex items-center bg-white rounded-xl shadow-md overflow-hidden p-3 transform hover:shadow-lg transition-shadow duration-300">
+            <img src="./assets/cocacola.jpg" alt="CocaCola" class="w-28 h-28 rounded-lg object-cover" />
+            <div class="flex-1 ml-4">
+                <h3 class="font-bold text-md text-gray-800">Coca-Cola 2L</h3>
+                <p class="text-xs text-gray-600 mt-1">Sabor refrescante e borbulhas para acompanhar sua refeição.</p>
+                <div class="flex items-center justify-between mt-3">
+                    <p class="font-bold text-lg text-gray-900">R$ 10,00</p>
+                    <button class="myButton add-to-cart-btn bg-red-600 text-white font-semibold text-sm py-1.5 px-3 rounded-lg hover:bg-red-700 transition-colors" data-name="Coca-cola" data-price="10.00">
+                        <i class="fa fa-cart-plus"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex items-center bg-white rounded-xl shadow-md overflow-hidden p-3 transform hover:shadow-lg transition-shadow duration-300">
+            <img src="./assets/guarana.jpg" alt="Guaraná Antarctica" class="w-28 h-28 rounded-lg object-cover" />
+            <div class="flex-1 ml-4">
+                <h3 class="font-bold text-md text-gray-800">Guaraná Antarctica 2L</h3>
+                <p class="text-xs text-gray-600 mt-1">O sabor único e refrescante do guaraná do Brasil.</p>
+                <div class="flex items-center justify-between mt-3">
+                    <p class="font-bold text-lg text-gray-900">R$ 10,00</p>
+                    <button class="myButton add-to-cart-btn bg-red-600 text-white font-semibold text-sm py-1.5 px-3 rounded-lg hover:bg-red-700 transition-colors" data-name="Guarana-Antarctica" data-price="10.00">
+                        <i class="fa fa-cart-plus"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex items-center bg-white rounded-xl shadow-md overflow-hidden p-3 transform hover:shadow-lg transition-shadow duration-300">
+            <img src="./assets/pepsi.jpg" alt="Pepsi" class="w-28 h-28 rounded-lg object-cover" />
+            <div class="flex-1 ml-4">
+                <h3 class="font-bold text-md text-gray-800">Pepsi 2L</h3>
+                <p class="text-xs text-gray-600 mt-1">Sabor inconfundível e refrescante para momentos especiais.</p>
+                <div class="flex items-center justify-between mt-3">
+                    <p class="font-bold text-lg text-gray-900">R$ 10,00</p>
+                    <button class="myButton add-to-cart-btn bg-red-600 text-white font-semibold text-sm py-1.5 px-3 rounded-lg hover:bg-red-700 transition-colors" data-name="Pepsi" data-price="10.00">
+                        <i class="fa fa-cart-plus"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex items-center bg-white rounded-xl shadow-md overflow-hidden p-3 transform hover:shadow-lg transition-shadow duration-300">
+            <img src="./assets/pakera.jpg" alt="Pakera Guarana" class="w-28 h-28 rounded-lg object-cover" />
+            <div class="flex-1 ml-4">
+                <h3 class="font-bold text-md text-gray-800">Pakera 2L</h3>
+                <p class="text-xs text-gray-600 mt-1">Sabor único e refrescante para compartilhar com a galera.</p>
+                <div class="flex items-center justify-between mt-3">
+                    <p class="font-bold text-lg text-gray-900">R$ 7,00</p>
+                    <button class="myButton add-to-cart-btn bg-red-600 text-white font-semibold text-sm py-1.5 px-3 rounded-lg hover:bg-red-700 transition-colors" data-name="Pakera" data-price="7.00">
+                        <i class="fa fa-cart-plus"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
 
     <!--COMEÇO MODAL-->
-    <div
-      class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden" id="cart-modal"
-    >
-      <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
-        <h2 class="text-center font-bold text-2xl mb-2">Meu Carrinho</h2>
+    <<div class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden transition-opacity duration-300" id="cart-modal">
+    
+    <div class="bg-white p-6 rounded-xl shadow-xl min-w-[90%] md:min-w-[600px] transform transition-all duration-300 scale-95">
+        
+        <div class="flex justify-between items-center border-b pb-3 mb-4">
+            <h2 class="font-poppins font-bold text-2xl text-gray-800">Meu Carrinho</h2>
+            <button id="close-modal-btn" class="text-gray-400 hover:text-red-600 transition-colors">
+                <i class="fa fa-times fa-2x"></i>
+            </button>
+        </div>
 
-        <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
-        <p class="font-bold">Total: <span id="cart-total"> 0.00 </span></p>
-        <p class="font-bold mt-4">Endereço de entrega:</p>
+        <div id="cart-items" class="flex flex-col space-y-3 max-h-60 overflow-y-auto pr-2">
+            </div>
+
+        <div class="flex justify-between items-center font-bold text-lg mt-5 border-t pt-4">
+            <p>Total:</p>
+            <p id="cart-total">R$ 0,00</p>
+        </div>
+
+        <p class="font-bold mt-6">Endereço de entrega:</p>
         <input
-          type="text"
-          placeholder="Digite o seu endereço completo..."
-          id="address"
-          class="w-full border-2 p-1 rounded my-1"
+            type="text"
+            placeholder="Digite seu bairro, rua e número..."
+            id="address"
+            class="w-full border border-gray-300 p-2 rounded-lg mt-1 focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-colors"
         />
-        <p class="text-red-500 hidden" id="address-warn">
-          Digite o seu endereço completo!
+        <p class="text-red-500 hidden mt-1 text-sm" id="address-warn">
+            Por favor, preencha seu endereço completo.
         </p>
 
-        <div class="flex items-center justify-between mt-5 w-full">
-          <button id="close-modal-btn" >Fechar</button>
-          <button
-            id="checkout-btn"
-            class="bg-green-500 text-white px-4 py-1 rounded"
-          >
-            Finalizar pedido
-          </button>
+        <div class="mt-6">
+            <button
+                id="checkout-btn"
+                class="w-full bg-green-600 text-white font-bold py-3 rounded-lg hover:bg-green-700 transition-colors duration-300"
+            >
+                Finalizar pedido
+            </button>
         </div>
-      </div>
+
     </div>
+</div>
 
     <!--FINAL DO MODAL DO CARRINHO-->
 
     <!--começo do Footer carrinho-->
-    <footer
-      class="w-full bg-red-500 py-3 fixed bottom-0 z-40 flex items-center justify-center"
-    >
-      <button
-        class="flex items-center gap-2 text-white font-bold"
-        id="cart-btn"
-      >
-        (<span id="cart-count">0</span>) Meu Carrinho
-        <i class="fa fa-cart-plus text-lg text-white"></i>
-      </button>
-    </footer>
+    <footer class="w-full bg-red-600 py-2 fixed bottom-0 z-40 shadow-t-lg">
+    <div class="flex items-center justify-center">
+        <button
+            class="flex items-center gap-3 text-white font-bold px-5 py-2 rounded-full hover:bg-red-700 transition-colors duration-300"
+            id="cart-btn"
+        >
+            <span class="text-lg">(<span id="cart-count">0</span>)</span>
+            <span>Meu Carrinho</span>
+            <i class="fa fa-shopping-cart text-xl"></i>
+        </button>
+    </div>
+</footer>
     <!--final do Footer carrinho-->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
     <script src="./script.js"></script>
   </body>
 </html>
