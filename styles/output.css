@@ -594,6 +594,56 @@ body {
   }
 }
 
+.btn-bite {
+  position: relative;
+  overflow: hidden;
+  /* Garante que os pseudo-elementos fiquem contidos */
+  border-radius: 0.5rem;
+  /* Ajusta conforme o border-radius do botão original */
+}
+
+/* Cria a parte superior esquerda da "mordida" */
+
+.btn-bite::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -10px;
+  /* Ajuste para onde a "mordida" começa */
+  width: 20px;
+  /* Largura do corte */
+  height: 10px;
+  /* Altura do corte */
+  background-color: #fff;
+  /* Cor de fundo do card, use theme() para Tailwind */
+  border-bottom-right-radius: 10px;
+  /* Arredonda a ponta do "corte" */
+  transform: rotate(45deg);
+  /* Gira para fazer um corte diagonal */
+  transform-origin: top left;
+}
+
+/* Cria a parte inferior direita da "mordida" */
+
+.btn-bite::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: -10px;
+  /* Ajuste para onde a "mordida" começa */
+  width: 20px;
+  /* Largura do corte */
+  height: 10px;
+  /* Altura do corte */
+  background-color: #fff;
+  /* Cor de fundo do card */
+  border-top-left-radius: 10px;
+  /* Arredonda a ponta do "corte" */
+  transform: rotate(45deg);
+  /* Gira para fazer um corte diagonal */
+  transform-origin: bottom right;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -785,10 +835,6 @@ body {
 
 .mt-2 {
   margin-top: 0.5rem;
-}
-
-.mt-3 {
-  margin-top: 0.75rem;
 }
 
 .mt-4 {
@@ -1024,16 +1070,6 @@ body {
 
 .transform-none {
   transform: none;
-}
-
-@keyframes pulse {
-  50% {
-    opacity: .5;
-  }
-}
-
-.animate-pulse {
-  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
 .touch-auto {
@@ -1845,10 +1881,6 @@ body {
   border-radius: 0.5rem;
 }
 
-.rounded-md {
-  border-radius: 0.375rem;
-}
-
 .rounded-xl {
   border-radius: 0.75rem;
 }
@@ -1881,6 +1913,11 @@ body {
 .rounded-t {
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
+}
+
+.rounded-t-2xl {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
 }
 
 .rounded-bl {
@@ -1999,11 +2036,6 @@ body {
 .bg-\[rgb\(255\2c 0\2c 0\)\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 0 0 / var(--tw-bg-opacity, 1));
-}
-
-.bg-amber-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(251 191 36 / var(--tw-bg-opacity, 1));
 }
 
 .bg-black\/70 {
@@ -2226,6 +2258,11 @@ body {
 .py-1 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
+}
+
+.py-1\.5 {
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
 }
 
 .py-12 {
@@ -2901,6 +2938,10 @@ body {
   forced-color-adjust: none;
 }
 
+/* EFEITO DE MORDIDA PARA O BOTÃO */
+
+/* Você pode precisar adicionar mais estilos globais ou utilitários aqui, se houver */
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
@@ -2948,11 +2989,6 @@ body {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.hover\:bg-amber-500:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(245 158 11 / var(--tw-bg-opacity, 1));
-}
-
 .hover\:bg-green-600:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(22 163 74 / var(--tw-bg-opacity, 1));
@@ -2975,10 +3011,6 @@ body {
 .hover\:text-red-600:hover {
   --tw-text-opacity: 1;
   color: rgb(220 38 38 / var(--tw-text-opacity, 1));
-}
-
-.hover\:underline:hover {
-  text-decoration-line: underline;
 }
 
 .before\:hover\:text-center:hover::before {
@@ -3030,6 +3062,16 @@ body {
 
   .sm\:flex-row {
     flex-direction: row;
+  }
+
+  .sm\:rounded-l-2xl {
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+  }
+
+  .sm\:rounded-r-none {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
   }
 
   .sm\:text-4xl {
@@ -3085,4 +3127,3 @@ body {
     }
   }
 }
-

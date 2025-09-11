@@ -9,3 +9,41 @@
   }
 }
 
+/* EFEITO DE MORDIDA PARA O BOTÃO */
+@layer components {
+  .btn-bite {
+    position: relative;
+    overflow: hidden; /* Garante que os pseudo-elementos fiquem contidos */
+    border-radius: 0.5rem; /* Ajusta conforme o border-radius do botão original */
+  }
+
+  /* Cria a parte superior esquerda da "mordida" */
+  .btn-bite::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10px; /* Ajuste para onde a "mordida" começa */
+    width: 20px; /* Largura do corte */
+    height: 10px; /* Altura do corte */
+    background-color: theme('colors.white'); /* Cor de fundo do card, use theme() para Tailwind */
+    border-bottom-right-radius: 10px; /* Arredonda a ponta do "corte" */
+    transform: rotate(45deg); /* Gira para fazer um corte diagonal */
+    transform-origin: top left;
+  }
+  
+  /* Cria a parte inferior direita da "mordida" */
+  .btn-bite::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: -10px; /* Ajuste para onde a "mordida" começa */
+    width: 20px; /* Largura do corte */
+    height: 10px; /* Altura do corte */
+    background-color: theme('colors.white'); /* Cor de fundo do card */
+    border-top-left-radius: 10px; /* Arredonda a ponta do "corte" */
+    transform: rotate(45deg); /* Gira para fazer um corte diagonal */
+    transform-origin: bottom right;
+  }
+}
+
+/* Você pode precisar adicionar mais estilos globais ou utilitários aqui, se houver */
