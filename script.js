@@ -8,13 +8,13 @@ const closeModalBtn = document.getElementById("close-modal-btn");
 const cartCounter = document.getElementById("cart-count");
 const addressInput = document.getElementById("address");
 const addressWarn = document.getElementById("address-warn");
-const button = document.querySelectorAll('.myButton');
+const button = document.querySelectorAll(".myButton");
 
-button.forEach(button => {
-  button.addEventListener('click', function() {
-    this.classList.add('bg-neutral-600');
+button.forEach((button) => {
+  button.addEventListener("click", function () {
+    this.classList.add("bg-neutral-600");
     setTimeout(() => {
-      this.classList.remove('bg-neutral-600');
+      this.classList.remove("bg-neutral-600");
     }, 130);
   });
 });
@@ -43,6 +43,7 @@ mainContent.addEventListener("click", function (evento) {
   }
 });
 
+// FUNÇÃO MODIFICADA PARA ADICIONAR A ANIMAÇÃO
 function addToCart(name, price) {
   const existingItem = cart.find((item) => item.name === name);
   if (existingItem) {
@@ -50,6 +51,15 @@ function addToCart(name, price) {
   } else {
     cart.push({ name, price, quantity: 1 });
   }
+
+  // Adiciona a classe da animação de fogo
+  cartCounter.classList.add("fire-effect");
+
+  // Remove a classe após 600ms (duração da animação)
+  setTimeout(() => {
+    cartCounter.classList.remove("fire-effect");
+  }, 600);
+
   updateCartModal();
 }
 
@@ -58,7 +68,12 @@ function updateCartModal() {
   let total = 0;
   cart.forEach((item) => {
     const cartItemElement = document.createElement("div");
-    cartItemElement.classList.add("flex", "justify-between", "mb-4", "flex-col");
+    cartItemElement.classList.add(
+      "flex",
+      "justify-between",
+      "mb-4",
+      "flex-col"
+    );
     cartItemElement.innerHTML = `
         <div class="flex items-center justify-between">
             <div>
@@ -66,13 +81,18 @@ function updateCartModal() {
                 <p>Qtd: ${item.quantity}</p>
                 <p class ="font-medium mt-2">R$ ${item.price.toFixed(2)}</p>
             </div>
-            <button class="remove-from-cart-btn bg-red-500 text-white px-3 py-1 rounded" data-name="${item.name}">Remover</button>
+            <button class="remove-from-cart-btn bg-red-500 text-white px-3 py-1 rounded" data-name="${
+              item.name
+            }">Remover</button>
         </div>
     `;
     cartItemsContainer.appendChild(cartItemElement);
     total += item.price * item.quantity;
   });
-  cartTotal.textContent = total.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
+  cartTotal.textContent = total.toLocaleString("pt-BR", {
+    style: "currency",
+    currency: "BRL",
+  });
   cartCounter.innerHTML = cart.length;
 }
 

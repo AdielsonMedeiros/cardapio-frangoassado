@@ -594,55 +594,9 @@ body {
   }
 }
 
-.btn-bite {
-  position: relative;
-  overflow: hidden;
-  /* Garante que os pseudo-elementos fiquem contidos */
-  border-radius: 0.5rem;
-  /* Ajusta conforme o border-radius do botão original */
-}
-
 /* Cria a parte superior esquerda da "mordida" */
 
-.btn-bite::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -10px;
-  /* Ajuste para onde a "mordida" começa */
-  width: 20px;
-  /* Largura do corte */
-  height: 10px;
-  /* Altura do corte */
-  background-color: #fff;
-  /* Cor de fundo do card, use theme() para Tailwind */
-  border-bottom-right-radius: 10px;
-  /* Arredonda a ponta do "corte" */
-  transform: rotate(45deg);
-  /* Gira para fazer um corte diagonal */
-  transform-origin: top left;
-}
-
 /* Cria a parte inferior direita da "mordida" */
-
-.btn-bite::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  right: -10px;
-  /* Ajuste para onde a "mordida" começa */
-  width: 20px;
-  /* Largura do corte */
-  height: 10px;
-  /* Altura do corte */
-  background-color: #fff;
-  /* Cor de fundo do card */
-  border-top-left-radius: 10px;
-  /* Arredonda a ponta do "corte" */
-  transform: rotate(45deg);
-  /* Gira para fazer um corte diagonal */
-  transform-origin: bottom right;
-}
 
 .sr-only {
   position: absolute;
@@ -1915,11 +1869,6 @@ body {
   border-top-right-radius: 0.25rem;
 }
 
-.rounded-t-2xl {
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
-}
-
 .rounded-bl {
   border-bottom-left-radius: 0.25rem;
 }
@@ -2085,6 +2034,22 @@ body {
 .bg-zinc-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(24 24 27 / var(--tw-bg-opacity, 1));
+}
+
+.bg-white\/20 {
+  background-color: rgb(255 255 255 / 0.2);
+}
+
+.bg-white\/10 {
+  background-color: rgb(255 255 255 / 0.1);
+}
+
+.bg-white\/5 {
+  background-color: rgb(255 255 255 / 0.05);
+}
+
+.bg-white\/0 {
+  background-color: rgb(255 255 255 / 0);
 }
 
 .bg-home {
@@ -2831,6 +2796,11 @@ body {
   backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
+.backdrop-blur-sm {
+  --tw-backdrop-blur: blur(4px);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
 .backdrop-grayscale {
   --tw-backdrop-grayscale: grayscale(100%);
   backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
@@ -3062,16 +3032,6 @@ body {
 
   .sm\:flex-row {
     flex-direction: row;
-  }
-
-  .sm\:rounded-l-2xl {
-    border-top-left-radius: 1rem;
-    border-bottom-left-radius: 1rem;
-  }
-
-  .sm\:rounded-r-none {
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
   }
 
   .sm\:text-4xl {
