@@ -152,8 +152,10 @@ function checkRestaurantOpen() {
   const data = new Date();
   const diaDaSemana = data.getDay();
   const hora = data.getHours();
-  return diaDaSemana === 0 && hora >= 7 && hora < 15;
+  // Retorna true se for Sábado (6) ou Domingo (0) entre 7h e 15h
+  return (diaDaSemana === 6 || diaDaSemana === 0) && (hora >= 7 && hora < 15);
 }
+
 
 const spanItem = document.getElementById("date-span");
 const isOpen = checkRestaurantOpen();
